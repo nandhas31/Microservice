@@ -1,4 +1,4 @@
-package com.nandha.microservice.User;
+package com.nandha.microservice.user;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,6 +15,9 @@ public class User {
         firstName = fName;
         lastName = lName;
     }
+    public User(){
+
+    }
     public String getFirstName(){
         return firstName;
     }
@@ -23,5 +26,11 @@ public class User {
     }
     public int getId(){
         return id;
+    }
+
+
+    @Override
+    public String toString(){
+        return "{id:" + id + " firstName:" + firstName + ", lastName:" + lastName + "}";
     }
 }
